@@ -28,7 +28,7 @@ def items(x, depth=-1):
       for z in items(y, depth+1):
         yield z
   else:
-  yield _,x
+    yield _,x
 
 out = []
 for _,x in items(  [10,[ 20,30],
@@ -36,7 +36,7 @@ for _,x in items(  [10,[ 20,30],
                         [   (  50,60,70),
                             [  80,90,100],110]]):
    out += [x]
-return out
+print out
 ``` 
 
 1c. Repeat the above, this time using _list comprehensions_.
@@ -64,7 +64,7 @@ def lines(string):
     else:
       tmp += ch 
   if tmp:
-  yield tmp
+    yield tmp
 ```
   
 ### 2. Dunders
@@ -87,6 +87,7 @@ class o:
 was deleted?
 
 ```python
+from __future__ import division
 r = random.random
 rseed = random.seed
 
